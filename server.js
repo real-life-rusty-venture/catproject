@@ -16,12 +16,13 @@ const path = require("path")
 server.use(express.json())
 server.use(morgan("dev"))
 server.use(cors())
+server.use(express.static(path.join(__dirname, "client", "dist")))
 
 
 
 mongoose.set("strictQuery", false)
 try {
-    mongoose.connect(process.env.LINK, (err) => {
+    mongoose.connect(`${process.env.LINK}`, (err) => {
     if (err) {
         console.log(err)
     }})
@@ -49,9 +50,9 @@ server.use((err, req, res, next) => {
 
 
 
-server.get("/test", (req, res) => {
-    res.send("success!")
-})
+// server.get("/test", (req, res) => {
+//     res.send("success!")
+// })
 server.use("/auth", require("./routes/authRouter.js"))
 
 // server.use("/api", expressjwt({secret : process.env.SECRET, algorithms: ['HS256']}))
@@ -59,16 +60,9 @@ server.use('/api', jwt({secret: process.env.SECRET, algorithms: ['HS256']}))
 server.use("/api/cat", catRouter)
 
 
-server.get("/", (req, res, next) => {
-    res.send("the gets been got!")
-})
-
-
-
-
-
-server.use(express.static(path.join(__dirname, "client", "dist")))
-
+// server.get("/", (req, res, next) => {
+//     res.send("the gets been got!")
+// })
 
 server.get("*", (req, res) => { res.sendFile(path.join(__dirname, "client", "dist", "index.html")); });
 
