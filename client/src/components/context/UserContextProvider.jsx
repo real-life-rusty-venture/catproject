@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 const UserContext = React.createContext()
+
 const userAxios = axios.create()
 userAxios.interceptors.request.use(config => {
     const token = localStorage.getItem("token")
@@ -12,7 +13,7 @@ function UserContextProvider(props) {
 
 
     const initState = {
-        user : JSON.parse(localStorage.getItem("user")) || "",
+        user: JSON.parse(localStorage.getItem("user")) || "",
         token : localStorage.getItem("token") || "",
         cats : [],
         errMsg : ""
@@ -22,6 +23,7 @@ function UserContextProvider(props) {
         // cats : [],
         // errMsg : ""
     }
+
     const [userState, setUserState] = React.useState(initState)
     const [allCats, setAllCats] = React.useState([])
     const [edit, setEdit] = React.useState({

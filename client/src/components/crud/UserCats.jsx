@@ -10,7 +10,8 @@ export default function UserCats(props) {
     React.useEffect(() => {
         getUserCats()
     }, [])
-    const catMap = cat?.map(item => {
+    console.log("cat", cat)
+    const catMap = cat ?  console.log("you got nothing man (userCats line 14)") : cat.map(item => {
         // console.log("catMap theyre a firin mah lazer")
         // console.log(item) 
         // console.log("^^^^^^^^item from UserCats")

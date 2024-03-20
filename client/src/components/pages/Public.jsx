@@ -6,7 +6,7 @@ export default function Public() {
     const { user, addCat, cats, getAllCats, allCats } = React.useContext(UserContext)
     React.useEffect(() => { getAllCats() }, [])
 
-
+    console.log(cats)
     // const divStyle = {
     //     backgroundColor : "#E5E4E2",
     //     flexWrap : "wrap"
