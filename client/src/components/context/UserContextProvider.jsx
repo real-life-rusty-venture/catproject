@@ -79,7 +79,7 @@ function UserContextProvider(props) {
                 ...prev,
                 cats : [...prev.cats, res.data]
             }))
-            setAddCatMessage("successfully added a lovely little cat!")
+            setAddCatMessage("successfully added a lovely little cat! 😺")
 
         })
         .catch(err => {

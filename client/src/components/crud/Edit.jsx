@@ -139,9 +139,9 @@ const [editStyleState, setEditStyleState] = React.useState(editStyle)
             <button onClick={flipperHandleClick}>edit this cat dont turn back</button>
             { editFlipper &&
             <form >
-                <input style = {editStyleState} name = "title" onChange={handleChange} value = {edit.title} autoComplete="off"/>
-                <input style = {editStyleState} name = "description" onChange={handleChange} value = {edit.description} autoComplete="off"/>
-                <input style = {editStyleState} name = "imgUrl" onChange={handleChange} value = {edit.imgUrl} autoComplete="off"/>
+                <input style = {editStyleState} placeholder = "title" name = "title" onChange={handleChange} value = {edit.title} autoComplete="off"/>
+                <input style = {editStyleState} placeholder = "description" name = "description" onChange={handleChange} value = {edit.description} autoComplete="off"/>
+                <input style = {editStyleState} placeholder = "imgUrl" name = "imgUrl" onChange={handleChange} value = {edit.imgUrl} autoComplete="off"/>
                 <button type = "button" onClick={formHandleClick}>fix this cat!</button>
                 <p>{editCatMessage}</p>
             </form>
