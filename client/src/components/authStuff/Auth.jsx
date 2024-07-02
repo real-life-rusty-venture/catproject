@@ -45,7 +45,8 @@ export default function Auth() {
         flexDirection : "column",
         justifyContent : "center",
         alignItems : 'center',
-        position : "static"
+        position : "static",
+        height : "100vh"
     }
 
 
@@ -61,8 +62,18 @@ export default function Auth() {
       if (mediaQuery.matches) {
          
           const smallAuthStyle = {
-            textAlign : "center",
-            backgroundColor : "#E5E4E2"
+            // textAlign : "center",
+            // backgroundColor : "#E5E4E2",
+            // height : "100vh"
+            border : "2px solid #36454f",
+            padding : "20px",
+            backgroundColor : "#E5E4E2",
+            display : "flex",
+            flexDirection : "column",
+            justifyContent : "center",
+            alignItems : 'center',
+            position : "static",
+            height : "100vh"
 
 
 

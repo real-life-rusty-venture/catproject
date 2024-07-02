@@ -84,7 +84,8 @@ export default function NewCat(props) {
         backgroundColor : "#E5E4E2",
         flexWrap : "wrap",
         alignItems : "center",
-        justifyContent : "space-evenly"
+        // justifyContent : "space-evenly",
+        height : "100vh"
     }
 
 

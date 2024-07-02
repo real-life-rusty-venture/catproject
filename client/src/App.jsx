@@ -27,7 +27,8 @@ function App() {
 
 
     const divStyle = {
-      backgroundcolor : "#213547"
+      backgroundcolor : "#213547",
+      height : "100vh"
     }
   return (
     // <UserContextProvider>
