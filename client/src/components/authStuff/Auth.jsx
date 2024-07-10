@@ -73,7 +73,7 @@ export default function Auth() {
             justifyContent : "center",
             alignItems : 'center',
             position : "static",
-            height : "100vh"
+            height : "85vh"
 
 
 
